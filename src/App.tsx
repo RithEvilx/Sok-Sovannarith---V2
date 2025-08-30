@@ -9,7 +9,6 @@ import { ColorModeProvider } from "./components/ui/color-mode";
 import Router from "./router";
 
 function App() {
-  
   React.useEffect(() => {
     const lng = localStorage.getItem("language");
     if (lng) {
@@ -24,7 +23,7 @@ function App() {
     <ColorModeProvider attribute="class" defaultTheme="light">
       <Provider>
         <Flex justifyContent="center" pt="7rem">
-          <Flex bg="red" width="35%">
+          <Flex width="38%">
             <Router />
           </Flex>
         </Flex>

@@ -45,7 +45,7 @@ const FloatSetting = () => {
   }, []);
 
   return (
-    <Float top="49px" right="100px">
+    <Float top="50px" right="106px">
       <Flex align="center" gap="3" bg={panelBg} borderWidth="1px" borderColor={panelBorder} rounded="sm" shadow="sm" px="3" py="2">
         {/* Language selector */}
         <HStack gap="0.5rem">

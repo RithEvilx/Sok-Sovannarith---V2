@@ -12,20 +12,20 @@ html {
 
 @font-face {
   font-family: "Poppins-Regular";
-  src: url(/src/assets//fonts/Poppins/Poppins-Regular.ttf);
+  src: url(/fonts/Poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: "Poppins-Medium";
-  src: url(/src/assets//fonts/Poppins/Poppins-Medium.ttf);
+  src: url(/fonts/Poppins/Poppins-Medium.ttf);
 }
 
 @font-face {
   font-family: "Poppins-Bold";
-  src: url(/src/assets//fonts/Poppins/Poppins-Bold.ttf);
+  src: url(/fonts/Poppins/Poppins-Bold.ttf);
 }
 
 @font-face {
   font-family: "Hanuman";
-  src: url(/src/assets//fonts/Hanuman/Hanuman-regular.ttf);
+  src: url(/fonts/Hanuman/Hanuman-regular.ttf);
 }

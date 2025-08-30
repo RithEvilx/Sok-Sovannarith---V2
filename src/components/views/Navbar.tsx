@@ -24,7 +24,7 @@ const Navbar = () => {
       as="nav"
       role="navigation"
       position="fixed"
-      bottom="4"
+      bottom="20px"
       left="50%"
       transform="translateX(-50%)"
       bg={navBg}
