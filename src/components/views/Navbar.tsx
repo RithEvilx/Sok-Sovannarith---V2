@@ -1,3 +1,4 @@
+import { GitHubLink, LinkedinLInk, YoutubeLink } from "@/constants/app";
 import { Box, Flex, Link as ChakraExternalLink } from "@chakra-ui/react";
 import { FaGithub, FaHouse, FaLinkedin, FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -30,7 +31,7 @@ const Navbar = () => {
 
         <Box as="li">
           <ChakraExternalLink
-            href="https://www.linkedin.com/in/your-handle"
+            href={LinkedinLInk}
             aria-label="LinkedIn"
             target="_blank"
             _hover={{ transform: "scale(1.08)", bg: "#e7e7e7" }}
@@ -44,7 +45,7 @@ const Navbar = () => {
 
         <Box as="li">
           <ChakraExternalLink
-            href="https://github.com/your-handle"
+            href={GitHubLink}
             aria-label="GitHub"
             target="_blank"
             _hover={{ transform: "scale(1.08)", bg: "#e7e7e7" }}
@@ -58,7 +59,7 @@ const Navbar = () => {
 
         <Box as="li">
           <ChakraExternalLink
-            href="https://youtube.com/@your-handle"
+            href={YoutubeLink}
             aria-label="YouTube"
             target="_blank"
             _hover={{ transform: "scale(1.08)", bg: "#e7e7e7" }}
