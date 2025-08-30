@@ -1,11 +1,12 @@
 import React from "react";
-import "./i18next";
 import { changeLanguage } from "i18next";
-// Component
+import "./i18next";
+import { Flex } from "@chakra-ui/react";
+// Components
 import { Provider } from "./components/ui/provider";
+import { ColorModeProvider } from "./components/ui/color-mode";
 // Router
 import Router from "./router";
-import { Flex } from "@chakra-ui/react";
 
 function App() {
   React.useEffect(() => {
@@ -19,13 +20,15 @@ function App() {
   }, []); // run once on mount
 
   return (
-    <Provider defaultTheme="light" themes={["light", "dark"]}>
-      <Flex justifyContent="center" pt="7rem">
-        <Flex bg="red" width="35%">
-          <Router />
+    <ColorModeProvider attribute="class" defaultTheme="light">
+      <Provider>
+        <Flex justifyContent="center" pt="7rem">
+          <Flex bg="red" width="35%">
+            <Router />
+          </Flex>
         </Flex>
-      </Flex>
-    </Provider>
+      </Provider>
+    </ColorModeProvider>
   );
 }
 

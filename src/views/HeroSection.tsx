@@ -5,7 +5,7 @@ const HeroSection = () => {
     <SimpleGrid>
       <Flex>
         <Box>
-          <Heading fontWeight="bold" size="4xl">
+          <Heading fontWeight="bold" size="5xl">
             Hi, I'm Rith
           </Heading>
           <Text>
