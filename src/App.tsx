@@ -9,6 +9,7 @@ import { ColorModeProvider } from "./components/ui/color-mode";
 import Router from "./router";
 
 function App() {
+  
   React.useEffect(() => {
     const lng = localStorage.getItem("language");
     if (lng) {
@@ -17,7 +18,7 @@ function App() {
       localStorage.setItem("language", "en");
       changeLanguage("en");
     }
-  }, []); // run once on mount
+  }, []);
 
   return (
     <ColorModeProvider attribute="class" defaultTheme="light">
