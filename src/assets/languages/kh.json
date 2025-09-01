@@ -1,6 +1,14 @@
 {
   "translation": {
+    "home": "ទំព័រដើម",
+    "linkedin": "លីងឌីន",
+    "github": "ហ្គីតហាប់",
+    "youtube": "យូធូប",
+    "About Me": "អំពីខ្ញុំ",
+    "Work Experience": "បទពិសោធន៍ការងារ",
+    "UDAYA Technology":"ឧទ័យ ថេកណឡជី",
     "Hi, I'm Sovannarith": "សួស្តី! ខ្ញុំឈ្មោះ សុវណ្ណារិទ្ធ",
-    "I love transforming concepts into beautiful, functional websites. From sleek layouts to seamless interactions, I bring creativity and code together to craft experiences that inspire.": "ខ្ញុំស្រឡាញ់ការបម្លែងគំនិតឲ្យក្លាយជាវេបសាយដ៏ស្រស់ស្អាត និងមានប្រសិទ្ធភាព។ ចាប់ពីប្លង់ទាក់ទាញរហូតដល់អន្តរកម្មរលូន ខ្ញុំបញ្ចូលការច្នៃប្រឌិត និងកូដចូលគ្នា ដើម្បីបង្កើតបទពិសោធន៍ដែលបណ្ដាលឲ្យមានការបំផុសគំនិត។"
+    "I love transforming concepts into beautiful, functional websites. From sleek layouts to seamless interactions, I bring creativity and code together to craft experiences that inspire.": "ខ្ញុំស្រឡាញ់ការបម្លែងគំនិតឲ្យក្លាយជាវេបសាយដ៏ស្រស់ស្អាត និងមានប្រសិទ្ធភាព។ ចាប់ពីប្លង់ទាក់ទាញរហូតដល់អន្តរកម្មរលូន ខ្ញុំបញ្ចូលការច្នៃប្រឌិត និងកូដចូលគ្នា ដើម្បីបង្កើតបទពិសោធន៍ដែលបណ្ដាលឲ្យមានការបំផុសគំនិត។",
+    "I graduated in May 2024 with a Bachelor's degree in Computer Science from the Royal University of Phnom Penh. Shortly after, I landed my first job at UDAYA Technology as a Frontend Developer, where I apply my skills in creating clean, functional, and engaging web experiences.": "ខ្ញុំបានបញ្ចប់ការសិក្សា នៅខែឧសភា ឆ្នាំ ២០២៤ ជាមួយនឹងបរិញ្ញាបត្រ វិទ្យាសាស្ត្រកុំព្យូទ័រ ពីសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ។ បន្ទាប់ពីនោះ ខ្ញុំបានរកឃើញការងារដំបូងរបស់ខ្ញុំ នៅក្រុមហ៊ុន UDAYA Technology ជា Frontend Developer ដែលខ្ញុំអនុវត្តជំនាញក្នុងការបង្កើតបទពិសោធន៍វេបសាយ ឱ្យមានភាពស្អាត មានប្រសិទ្ធភាព និងគួរឱ្យចាប់អារម្មណ៍។"
   }
 }

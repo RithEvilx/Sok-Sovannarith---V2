@@ -1,6 +1,14 @@
 {
   "translation": {
+    "home": "Home",
+    "linkedin": "Linkedin",
+    "github": "GitHub",
+    "youtube": "Youtube",
+    "About Me": "About Me",
+    "Work Experience": "Work Experience",
+    "UDAYA Technology": "UDAYA Technology",
     "Hi, I'm Sovannarith": "Hi, I'm Sovannarith",
-    "I love transforming concepts into beautiful, functional websites. From sleek layouts to seamless interactions, I bring creativity and code together to craft experiences that inspire.": "I love transforming concepts into beautiful, functional websites. From sleek layouts to seamless interactions, I bring creativity and code together to craft experiences that inspire."
+    "I love transforming concepts into beautiful, functional websites. From sleek layouts to seamless interactions, I bring creativity and code together to craft experiences that inspire.": "I love transforming concepts into beautiful, functional websites. From sleek layouts to seamless interactions, I bring creativity and code together to craft experiences that inspire.",
+    "I graduated in May 2024 with a Bachelor's degree in Computer Science from the Royal University of Phnom Penh. Shortly after, I landed my first job at UDAYA Technology as a Frontend Developer, where I apply my skills in creating clean, functional, and engaging web experiences.": "I graduated in May 2024 with a Bachelor's degree in Computer Science from the Royal University of Phnom Penh. Shortly after, I landed my first job at UDAYA Technology as a Frontend Developer, where I apply my skills in creating clean, functional, and engaging web experiences."
   }
 }

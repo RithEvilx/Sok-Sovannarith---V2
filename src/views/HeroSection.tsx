@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+// Import Image
+import MyProfile from "@/assets/imgs/my_profile.webp";
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -16,9 +18,19 @@ const HeroSection = () => {
             )}
           </Text>
         </Flex>
-        <Box boxSize="180px" border="1px solid #000" bg="pink">
-          <Image src="" alt="Hi" width="100%" height="100%" />
-        </Box>
+        <Flex boxSize="150px" justifyContent="center" alignItems="center">
+          <Image
+            src={MyProfile}
+            alt="Hi"
+            loading="lazy"
+            width="100%"
+            height="100%"
+            objectFit="cover"
+            border="3px solid #eee"
+            boxShadow="0px 0px 15px #eee, 0px 0px 15px #eee inset"
+            rounded="lg"
+          />
+        </Flex>
       </Flex>
     </SimpleGrid>
   );
