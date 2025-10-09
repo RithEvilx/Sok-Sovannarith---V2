@@ -1,12 +1,14 @@
+import "./i18next";
 import React from "react";
 import { changeLanguage } from "i18next";
-import "./i18next";
 import { Flex } from "@chakra-ui/react";
 // Components
 import { Provider } from "./components/ui/provider";
 import { ColorModeProvider } from "./components/ui/color-mode";
 // Router
 import Router from "./router";
+import FloatSetting from "./components/FloatSetting";
+import ContactButton from "./components/ContactButton";
 
 function App() {
   React.useEffect(() => {
@@ -22,11 +24,15 @@ function App() {
   return (
     <ColorModeProvider attribute="class" defaultTheme="light">
       <Provider>
-        <Flex justifyContent="center" pt="7rem">
-          <Flex width="38%">
-            <Router />
+        <>
+          <FloatSetting />
+          <ContactButton />
+          <Flex justifyContent="center" paddingBlock="2rem 7rem">
+            <Flex width="40%">
+              <Router />
+            </Flex>
           </Flex>
-        </Flex>
+        </>
       </Provider>
     </ColorModeProvider>
   );

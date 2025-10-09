@@ -1,13 +1,14 @@
 import { useTranslation } from "react-i18next";
-import { Avatar, Box, Flex, Float, HStack, IconButton } from "@chakra-ui/react";
+import { Avatar, Box, Flex, HStack, IconButton } from "@chakra-ui/react";
 // Components
-import { useColorMode, useColorModeValue } from "./ui/color-mode";
+import { useColorMode } from "./ui/color-mode";
 // Icons
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 // Import Image
 import KH from "@/assets/imgs/icons/kh.png";
 import EN from "@/assets/imgs/icons/en.png";
 import { useEffect } from "react";
+import { usePanelColors } from "@/constants/styles";
 
 const LANG_KEY = "language";
 
@@ -15,11 +16,7 @@ const FloatSetting = () => {
   const { i18n } = useTranslation();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const panelBg = useColorModeValue("white", "gray.800");
-  const panelBorder = useColorModeValue("gray.200", "gray.700");
-  const activeBg = useColorModeValue("gray.300", "whiteAlpha.200");
-  const hoverBg = useColorModeValue("gray.300", "whiteAlpha.200");
-  const activeBorder = useColorModeValue("gray.300", "gray.600");
+  const { panelBg, panelBorder, activeBg, hoverBg, activeBorder } = usePanelColors();
 
   // derive current language (i18next may return 'en-US' etc.)
   const currentLang = (i18n.resolvedLanguage || i18n.language || "en").slice(0, 2);
@@ -45,8 +42,8 @@ const FloatSetting = () => {
   }, []);
 
   return (
-    <Float top="50px" right="106px">
-      <Flex align="center" gap="3" bg={panelBg} borderWidth="1px" borderColor={panelBorder} rounded="sm" shadow="sm" px="3" py="2">
+    <Box position="sticky" top="30px" left="90%" width="fit-content">
+      <Flex align="center" gap="3" bg={panelBg} borderWidth="1px" borderColor={panelBorder} rounded="full" shadow="sm" px="3" py="2">
         {/* Language selector */}
         <HStack gap="0.5rem">
           {/* KH */}
@@ -93,7 +90,7 @@ const FloatSetting = () => {
           </IconButton>
         </HStack>
       </Flex>
-    </Float>
+    </Box>
   );
 };
 

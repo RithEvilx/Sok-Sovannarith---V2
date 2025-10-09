@@ -43,3 +43,8 @@ html {
 .animate-rainbow-glow {
   animation: rainbow-glow 3s linear infinite;
 }
+
+/*? Global scrollbar styles */
+::-webkit-scrollbar {
+  width: 0px;
+}
