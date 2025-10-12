@@ -27,12 +27,12 @@ function ContactButton() {
     const vcard = `
 BEGIN:VCARD
 VERSION:3.0
-N:;Sok Sovannarith;;;
+N:;Frontend Developer;;;
 FN:Sok Sovannarith
-TITLE:Frontend Developer
+TITLE:Sok Sovannarith
 TEL;TYPE=CELL:+855016302954
 EMAIL:sovannarithx@gmail.com
-URL:https://your-portfolio.example/
+URL:https://sok-sovannarith-v2.vercel.app/
 END:VCARD
 `.trim();
 
@@ -60,10 +60,10 @@ END:VCARD
         <MotionBox
           as="div"
           position="fixed"
-          right="25px"
+          right="20px"
           zIndex={2000}
           initial={{ opacity: 0, scale: 0.9, bottom: 0 }}
-          animate={{ opacity: 1, scale: 1, bottom: 19 }}
+          animate={{ opacity: 1, scale: 1, bottom: 20 }}
           exit={{ opacity: 0, scale: 0.9, bottom: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
         >

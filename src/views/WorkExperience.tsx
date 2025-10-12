@@ -21,11 +21,9 @@ const WorkExperience = () => {
                       <Image width="100%" height="100%" objectFit="contain" src={item.image} alt={item.image} loading="lazy" rounded="sm" />
                     </Box>
                     <Flex direction="column" gap="0">
-                      <Text lineHeight={1} fontSize={{ base: "0.785rem", md: "initial" }}>
-                        {t(`${item.title}`)}
-                      </Text>
+                      <Text lineHeight={1}>{t(`${item.title}`)}</Text>
                       <Flex direction="column" gap="0">
-                        <Span fontSize="0.75rem" color={lightText}>
+                        <Span fontSize="0.785rem" color={lightText}>
                           {t(item.role)}
                         </Span>
                         <Text display={{ base: "block", md: "none" }} color={lightText} fontWeight="bold" fontSize="0.75rem" lineHeight={1}>

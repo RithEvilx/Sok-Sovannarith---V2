@@ -47,6 +47,7 @@ const Navbar = () => {
                 p="0.5rem"
                 borderRadius="full"
                 transition="transform 0.15s ease-in-out, background 0.15s ease-in-out"
+                bg={hoverBg}
                 _hover={{ transform: "scale(1.08)", bg: hoverBg }}
               >
                 <Box as={FaHouse} boxSize="5" color={iconColor} />
