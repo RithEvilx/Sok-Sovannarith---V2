@@ -3,16 +3,16 @@ import { AbsoluteCenter, Accordion, Box, Flex, Heading, Image, Span, Text } from
 // Import Style
 import { lightText } from "@/constants/styles";
 // Data
-import { WorkExperienceData } from "@/constants/data";
+import { EducationData } from "@/constants/data";
 
-const WorkExperience = () => {
+const Education = () => {
   const { t } = useTranslation();
   return (
     <Flex direction="column" gap="0.75rem">
-      <Heading size="xl">{t("Work Experience")}</Heading>
+      <Heading size="xl">{t("Education")}</Heading>
       <Flex direction="column">
         <Accordion.Root spaceY="4" variant="plain" collapsible>
-          {WorkExperienceData.map((item, index) => (
+          {EducationData.map((item, index) => (
             <Accordion.Item key={index} value={`${index}`}>
               <Flex position="relative">
                 <Accordion.ItemTrigger cursor="pointer">
@@ -34,15 +34,6 @@ const WorkExperience = () => {
                   </AbsoluteCenter>
                 </Accordion.ItemTrigger>
               </Flex>
-              <Accordion.ItemContent paddingLeft="3.6rem" mt="0.35rem">
-                <Accordion.ItemBody fontSize="0.875rem">
-                  {item.description?.map((d, dIndex) => (
-                    <Box as="ul" listStyle="disc" key={dIndex} listStylePosition="inside">
-                      <li>{`${t(d)}`}</li>
-                    </Box>
-                  ))}
-                </Accordion.ItemBody>
-              </Accordion.ItemContent>
             </Accordion.Item>
           ))}
         </Accordion.Root>
@@ -51,4 +42,4 @@ const WorkExperience = () => {
   );
 };
 
-export default WorkExperience;
+export default Education;

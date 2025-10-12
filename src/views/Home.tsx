@@ -3,6 +3,7 @@ import { SimpleGrid } from "@chakra-ui/react";
 import HeroSection from "./HeroSection";
 import AboutMe from "./AboutMe";
 import WorkExperience from "./WorkExperience";
+import Education from "./Education";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <HeroSection />
       <AboutMe />
       <WorkExperience />
+      <Education />
     </SimpleGrid>
   );
 };

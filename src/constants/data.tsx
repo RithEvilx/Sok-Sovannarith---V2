@@ -1,7 +1,18 @@
 // Import Image
 import UDAYA from "@/assets/imgs/logo/udaya.png";
-import Cambodia_Scholarship_Center from "@/assets/imgs/logo/cambodia-scholarship-center.png";
+import Cambodia_Scholarship_Center from "@/assets/imgs/logo/cambodia_scholarship_center.png";
+import BELTEI from "@/assets/imgs/logo/beltei_international_school.png";
+import RUPP from "@/assets/imgs/logo/royal_university_of_phnom_penh.jpg";
+import ANT from "@/assets/imgs/logo/ant.png";
 
+//* About Me
+export const AboutMeData = [
+  "I'm a passionate Frontend Developer with a strong foundation in web technologies and a keen eye for design and usability. I graduated in May 2024 with a Bachelor's degree in Computer Science from the Royal University of Phnom Penh.",
+  "Since then, I've been applying my skills to build clean, functional, and engaging web experiences that balance performance and aesthetics. I enjoy turning ideas into intuitive interfaces through modern JavaScript frameworks, responsive design, and best practices in UI/UX.",
+  "I'm always eager to learn new technologies, refine my craft, and collaborate with others to create meaningful digital solutions that make a real impact.",
+];
+
+//* Work Experience
 export const WorkExperienceData = [
   {
     image: UDAYA,
@@ -34,7 +45,7 @@ export const WorkExperienceData = [
   {
     image: Cambodia_Scholarship_Center,
     title: "Cambodia Scholarship Center",
-    role: "Web Developer Intern (Content & Site Maintenance)",
+    role: "Web Developer Intern",
     date: "Dec 2024 - Feb 2025",
     description: [
       "Maintained a custom, code-driven CMS (WordPress-like) and published fresh content daily.",
@@ -45,8 +56,30 @@ export const WorkExperienceData = [
   },
 ];
 
-export const AboutMeData = [
-  "I'm a passionate Frontend Developer with a strong foundation in web technologies and a keen eye for design and usability. I graduated in May 2024 with a Bachelor's degree in Computer Science from the Royal University of Phnom Penh.",
-  "Since then, I've been applying my skills to build clean, functional, and engaging web experiences that balance performance and aesthetics. I enjoy turning ideas into intuitive interfaces through modern JavaScript frameworks, responsive design, and best practices in UI/UX.",
-  "I'm always eager to learn new technologies, refine my craft, and collaborate with others to create meaningful digital solutions that make a real impact.",
+//* Education
+export const EducationData = [
+  {
+    image: RUPP,
+    title: "ROYAL UNIVERSITY OF PHNOM PENH",
+    role: "Bachelor's Degree in Computer Science",
+    date: "2020 - 2024",
+  },
+  {
+    image: ANT,
+    title: "ANT Technology Training Center",
+    role: "CSS, CSS3 + Bootstrap 5 - Short Course",
+    date: "Aug 2023 - Oct 2023",
+  },
+  {
+    image: ANT,
+    title: "ANT Technology Training Center",
+    role: "HTML, HTML5 - Short Course",
+    date: "Feb 2023 - Apr 2023",
+  },
+  {
+    image: BELTEI,
+    title: "BELTEI INTERNATIONAL SCHOOL",
+    role: "Completed Lower and Upper Secondary Education (Grades 6-12)",
+    date: "2013 - 2020",
+  },
 ];

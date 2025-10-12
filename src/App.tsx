@@ -1,5 +1,5 @@
 import "./i18next";
-import React from "react";
+import { useEffect } from "react";
 import { changeLanguage } from "i18next";
 import { Flex } from "@chakra-ui/react";
 // Components
@@ -11,7 +11,7 @@ import FloatSetting from "./components/FloatSetting";
 import ContactButton from "./components/ContactButton";
 
 function App() {
-  React.useEffect(() => {
+  useEffect(() => {
     const lng = localStorage.getItem("language");
     if (lng) {
       changeLanguage(lng);
