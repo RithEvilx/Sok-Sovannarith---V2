@@ -63,7 +63,7 @@ END:VCARD
           right="25px"
           zIndex={2000}
           initial={{ opacity: 0, scale: 0.9, bottom: 0 }}
-          animate={{ opacity: 1, scale: 1, bottom: 30 }}
+          animate={{ opacity: 1, scale: 1, bottom: 19 }}
           exit={{ opacity: 0, scale: 0.9, bottom: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
         >

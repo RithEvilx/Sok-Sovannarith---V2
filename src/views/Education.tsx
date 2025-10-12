@@ -21,14 +21,21 @@ const Education = () => {
                       <Image width="100%" height="100%" objectFit="contain" src={item.image} alt={item.image} loading="lazy" rounded="sm" />
                     </Box>
                     <Flex direction="column" gap="0">
-                      <Text lineHeight={1}>{t(`${item.title}`)}</Text>
-                      <Span fontSize="0.75rem" color={lightText}>
-                        {t(item.role)}
-                      </Span>
+                      <Text lineHeight={1} fontSize={{ base: "0.785rem", md: "initial" }}>
+                        {t(`${item.title}`)}
+                      </Text>
+                      <Flex direction="column" gap="0">
+                        <Span fontSize="0.75rem" color={lightText}>
+                          {t(item.role)}
+                        </Span>
+                        <Text display={{ base: "block", md: "none" }} color={lightText} fontWeight="bold" fontSize="0.75rem" lineHeight={1}>
+                          {item.date}
+                        </Text>
+                      </Flex>
                     </Flex>
                   </Flex>
-                  <AbsoluteCenter axis="vertical" insetEnd="0" pb="1.8rem">
-                    <Text color={lightText} fontSize="0.875rem" fontWeight="bold">
+                  <AbsoluteCenter axis="vertical" insetEnd="0" pb="1.8rem" display={{ base: "none", md: "block" }}>
+                    <Text color={lightText} fontWeight="bold" fontSize={{ base: "0.75rem", md: "0.875rem" }} mt="0.125rem">
                       {item.date}
                     </Text>
                   </AbsoluteCenter>

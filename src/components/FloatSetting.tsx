@@ -42,7 +42,7 @@ const FloatSetting = () => {
   }, []);
 
   return (
-    <Box position="sticky" top="30px" left="90%" width="fit-content">
+    <Box position="sticky" top="19px" left={{ base: "56%", md: "77%", lg: "90%" }} width="fit-content">
       <Flex align="center" gap="3" bg={panelBg} borderWidth="1px" borderColor={panelBorder} rounded="full" shadow="sm" px="3" py="2">
         {/* Language selector */}
         <HStack gap="0.5rem">

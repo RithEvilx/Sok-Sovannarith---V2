@@ -9,7 +9,7 @@ const HeroSection = () => {
     <SimpleGrid>
       <Flex gap="1rem">
         <Flex flex="1" direction="column" gap="1rem">
-          <Heading fontWeight="bold" size="5xl">
+          <Heading fontWeight="bold" size={{ base: "xl", md: "3xl", lg: "5xl" }}>
             {t("Hi, I'm Sovannarith")} {""}👋
           </Heading>
           <Text>
@@ -18,7 +18,7 @@ const HeroSection = () => {
             )}
           </Text>
         </Flex>
-        <Flex boxSize="150px" justifyContent="center" alignItems="center">
+        <Flex boxSize={{ base: "100px", md: "120px", lg: "150px" }} justifyContent="center" alignItems="center">
           <Image
             src={MyProfile}
             alt="Hi"

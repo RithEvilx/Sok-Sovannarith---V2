@@ -27,8 +27,8 @@ function App() {
         <>
           <FloatSetting />
           <ContactButton />
-          <Flex justifyContent="center" paddingBlock="2rem 7rem">
-            <Flex width="40%">
+          <Flex justifyContent="center" paddingBlock={{ base: "2.5rem 6rem", lg: "2rem 7rem" }}>
+            <Flex width={{ lg: "50%" }}>
               <Router />
             </Flex>
           </Flex>

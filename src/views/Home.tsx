@@ -7,7 +7,7 @@ import Education from "./Education";
 
 const Home = () => {
   return (
-    <SimpleGrid gap="3rem">
+    <SimpleGrid gap="3rem" paddingInline={{base: "1rem", md: "6rem"}}>
       <HeroSection />
       <AboutMe />
       <WorkExperience />
