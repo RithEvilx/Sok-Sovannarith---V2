@@ -6,6 +6,7 @@ import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skill from "./Skill";
 import Footer from "./Footer";
+import Project from "./Project";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <WorkExperience />
       <Education />
       <Skill />
+      <Project />
       <Footer />
     </SimpleGrid>
   );

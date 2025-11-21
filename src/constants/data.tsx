@@ -113,3 +113,16 @@ export const SkillsData = [
   "Figma",
   "VS Code",
 ];
+
+//* Project Development
+export const DevelopmentProjectData = [
+  {
+    image: "",
+    title: "Testing Title",
+    date: "Testing Date",
+    description: "Testing Description",
+    tech: ["TypeScript", "Chakra UI"],
+    demo: "abc",
+    github: "abc",
+  },
+];
