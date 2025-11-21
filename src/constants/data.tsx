@@ -17,10 +17,23 @@ export const WorkExperienceData = [
   {
     image: UDAYA,
     title: "UDAYA Technology",
+    role: "Frontend Developer",
+    date: "Oct 2025 - Present",
+    description: [
+      "Building a scalable and full-featured hotel booking platform using React.js, TypeScript, and Chakra UI (v3).",
+      "Implemented advanced state management and data synchronization with TanStack React Query to improve performance and user experience.",
+      "Developed responsive and accessible UI components to ensure consistent performance across devices and screen sizes.",
+      "Collaborated closely with backend and QA teams to deliver production-ready features within tight deadlines.",
+      "Deployed and maintained the frontend application in production, ensuring bug-free operation and optimal performance.",
+    ],
+  },
+  {
+    image: UDAYA,
+    title: "UDAYA Technology",
     role: "Frontend Developer Probation",
     date: "July 2025 - Oct 2025",
     description: [
-      "Completed the development of a fully functional room booking website using React.js, TypeScript, and Chakra UI (v2).",
+      "Completed the development of a fully functional room booking website using React.js, TypeScript, and Chakra UI (v3).",
       "Integrated secure online payment functionality using the ABA Bank API, enabling real-time transaction processing.",
       "Implemented advanced state management and data synchronization with TanStack React Query to improve performance and user experience.",
       "Developed responsive and accessible UI components to ensure consistent performance across devices and screen sizes.",
@@ -82,4 +95,21 @@ export const EducationData = [
     role: "Completed Secondary Education (Grades 6-12)",
     date: "2013 - 2020",
   },
+];
+
+//* Skills
+export const SkillsData = [
+  "HTMl",
+  "CSS",
+  "Javascript",
+  "ReactJS",
+  "TypeScript",
+  "TailwindCSS",
+  "Bootstrap",
+  "Chakra UI",
+  "Vite",
+  "TanStack Query",
+  "GitHub",
+  "Figma",
+  "VS Code",
 ];
