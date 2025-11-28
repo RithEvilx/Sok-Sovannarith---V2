@@ -2,9 +2,12 @@ import { useTranslation } from "react-i18next";
 import { Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 // Import Image
 import MyProfile from "@/assets/imgs/my_profile.webp";
+import { useColorMode } from "@/components/ui/color-mode";
 
 const HeroSection = () => {
   const { t } = useTranslation();
+  const { colorMode } = useColorMode();
+
   return (
     <SimpleGrid>
       {/* Tablet + */}
@@ -28,7 +31,7 @@ const HeroSection = () => {
             height="100%"
             objectFit="cover"
             border="3px solid #eee"
-            boxShadow="0px 0px 15px #eee, 0px 0px 15px #eee inset"
+            boxShadow={colorMode === "dark" ? "0px 0px 15px #eee, 0px 0px 15px #eee inset" : "0px 0px 15px #0a0a0a, 0px 0px 15px #0a0a0a inset"}
             rounded="lg"
           />
         </Flex>

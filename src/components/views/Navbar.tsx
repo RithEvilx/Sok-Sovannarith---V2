@@ -66,6 +66,7 @@ const Navbar = () => {
               p="0.5rem"
               borderRadius="full"
               _hover={{ transform: "scale(1.08)", bg: hoverBg }}
+              outline="none"
             >
               <Box as={FaLinkedin} boxSize="5" color={iconColor} />
             </ChakraExternalLink>
@@ -82,6 +83,7 @@ const Navbar = () => {
               p="0.5rem"
               borderRadius="full"
               _hover={{ transform: "scale(1.08)", bg: hoverBg }}
+              outline="none"
             >
               <Box as={FaGithub} boxSize="5" color={iconColor} />
             </ChakraExternalLink>
@@ -98,6 +100,7 @@ const Navbar = () => {
               p="0.5rem"
               borderRadius="full"
               _hover={{ transform: "scale(1.08)", bg: hoverBg }}
+              outline="none"
             >
               <Box as={FaYoutube} boxSize="5" color={iconColor} />
             </ChakraExternalLink>
