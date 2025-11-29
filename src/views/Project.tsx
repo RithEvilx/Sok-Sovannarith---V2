@@ -71,6 +71,7 @@ const Project = () => {
                             width="100%"
                             height="100%"
                             objectFit="cover"
+                            bg="#eee"
                           />
                         ) : (
                           <Flex
