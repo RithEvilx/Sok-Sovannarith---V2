@@ -93,7 +93,7 @@ export const EducationData = [
   {
     image: BELTEI,
     title: "BELTEI INTERNATIONAL SCHOOL",
-    role: "Completed Secondary Education (Grades 6-12)",
+    role: "Completed Secondary Education (G: 6-12)",
     date: "2013 - 2020",
   },
 ];

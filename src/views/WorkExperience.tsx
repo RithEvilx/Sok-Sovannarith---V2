@@ -13,7 +13,7 @@ const WorkExperience = () => {
       <Flex direction="column">
         <Accordion.Root spaceY="4" variant="plain" collapsible outline="none">
           {WorkExperienceData.map((item, index) => (
-            <Accordion.Item key={index} value={`${index}`}>
+            <Accordion.Item key={index} value={`${index}`} outline="none">
               <Flex position="relative">
                 <Accordion.ItemTrigger cursor="pointer">
                   <Flex flex="1" alignItems="flex-start" fontWeight="bold" gap="0.5rem">

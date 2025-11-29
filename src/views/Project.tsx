@@ -13,7 +13,7 @@ const Project = () => {
   return (
     <>
       <Flex direction="column" gap="0.75rem">
-        <Flex direction="column" alignItems="center" gap="1.5rem">
+        <Flex direction="column" alignItems="center" gap={{ base: "0.75rem", sm: "1rem", md: "1.5rem" }}>
           <Badge
             fontSize="18px"
             fontWeight="medium"
@@ -25,14 +25,14 @@ const Project = () => {
           >
             {t("My Projects")}
           </Badge>
-          <Heading fontSize="4xl" fontWeight="bold">
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "4xl" }} fontWeight="bold">
             Check out my lastest works
           </Heading>
-          <Text color="#bfbfbf" fontSize="18px" textAlign="center">
+          <Text color="#bfbfbf" fontSize={{ base: "14px", md: "18px" }} textAlign="center">
             I developed and designed websites, from simple pages to advanced web applications. Here are a few of my projects.
           </Text>
         </Flex>
-        <SimpleGrid mt="2rem">
+        <SimpleGrid mt={{ base: "1rem", md: "2rem" }}>
           <Tabs.Root defaultValue="featuredProject" variant="plain">
             <Tabs.List bg="bg.muted" rounded="l3" p="1" width="100%" mb="1rem">
               <Tabs.Trigger value="featuredProject" flex={1}>
@@ -62,7 +62,7 @@ const Project = () => {
                     }}
                   >
                     <Flex direction="column">
-                      <Box height="250px" overflow="hidden" cursor="pointer">
+                      <Box height={{ base: "200px", md: "250px" }} overflow="hidden" cursor="pointer">
                         {featuredProject.image !== "" ? (
                           <Image
                             src={featuredProject.image}
