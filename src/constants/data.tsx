@@ -1,9 +1,10 @@
-// Import Image
+// Import Images
 import UDAYA from "@/assets/imgs/logo/udaya.png";
 import Cambodia_Scholarship_Center from "@/assets/imgs/logo/cambodia_scholarship_center.png";
 import BELTEI from "@/assets/imgs/logo/beltei_international_school.png";
 import RUPP from "@/assets/imgs/logo/royal_university_of_phnom_penh.jpg";
 import ANT from "@/assets/imgs/logo/ant.png";
+import RomdoulKravanhResort from "/imgs/romdoul_kravanh_resort.png";
 
 //* About Me
 export const AboutMeData = [
@@ -119,12 +120,13 @@ export const SkillsData = [
 //* Project Featured
 export const FeaturedProjectData = [
   {
-    image: "",
-    title: "Testing Title",
-    date: "Testing Date",
-    description: "It about making portfolio and testing the desciption you know what i mean right",
-    tech: ["TypeScript", "Chakra UI"],
-    demo: "demo link",
+    image: RomdoulKravanhResort,
+    title: "Romdoul Kravanh Resort",
+    date: "July 2025 - Oct 2025",
+    description:
+      "A complete end-to-end room booking platform featuring real-time room availability, responsive UI, and a smooth booking flow. Integrated secure online payment through ABA Bank Payment Gateway, ensuring fast and trusted transactions for users. Built with a modern frontend stack focused on performance, usability, and clean UI/UX.",
+    tech: ["TypeScript", "Chakra UI", "TanStack Query"],
+    demo: "https://www.romdoul-kravanh.com/",
   },
   {
     image: "",

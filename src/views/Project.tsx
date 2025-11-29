@@ -3,7 +3,6 @@ import { Badge, Box, Flex, GridItem, Heading, Image, Link, SimpleGrid, Tabs, Tex
 import { useColorMode } from "@/components/ui/color-mode";
 import { FeaturedProjectData } from "@/constants/data";
 // Import Image
-import MyProfile from "@/assets/imgs/my_profile.webp";
 import { FaGithub, FaLink } from "react-icons/fa6";
 import { Tooltip } from "@/components/ui/tooltip";
 
@@ -50,7 +49,7 @@ const Project = () => {
               <Tabs.Indicator rounded="l2" />
             </Tabs.List>
             <Tabs.Content value="featuredProject">
-              <SimpleGrid columns={{ base: 1, md: 2 }} gap="0.5rem">
+              <SimpleGrid columns={{ base: 1, md: 2 }} gap={{ base: "1rem", md: "0.5rem" }}>
                 {FeaturedProjectData.map((featuredProject, index) => (
                   <GridItem
                     key={index}
@@ -64,17 +63,37 @@ const Project = () => {
                   >
                     <Flex direction="column">
                       <Box height="250px" overflow="hidden" cursor="pointer">
-                        <Image src={MyProfile} alt={featuredProject.title} loading="lazy" width="100%" height="100%" objectFit="cover" />
+                        {featuredProject.image !== "" ? (
+                          <Image
+                            src={featuredProject.image}
+                            alt={featuredProject.title}
+                            loading="lazy"
+                            width="100%"
+                            height="100%"
+                            objectFit="cover"
+                          />
+                        ) : (
+                          <Flex
+                            justifyContent="center"
+                            alignItems="center"
+                            height="100%"
+                            bg="#eee"
+                            color="#bfbfbf"
+                            fontSize={{ base: "14px", md: "16px" }}
+                          >
+                            No Image
+                          </Flex>
+                        )}
                       </Box>
                       {/* Content */}
                       <Flex direction="column" padding="0.5rem 0.75rem 0.75rem">
                         <Flex direction="column" justifyContent="space-between" alignItems="flex-start">
-                          <Text fontWeight="bold" fontSize="18px" lineHeight={1.25}>
+                          <Text fontWeight="bold" fontSize={{ base: "16px", md: "18px" }} lineHeight={1.25}>
                             {featuredProject.title}
                           </Text>
-                          <Text>{featuredProject.date}</Text>
+                          <Text fontSize="14px">{featuredProject.date}</Text>
                           <Tooltip content={featuredProject.description} showArrow>
-                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem">
+                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem" fontSize="14px">
                               {featuredProject.description}
                             </Text>
                           </Tooltip>
@@ -92,6 +111,8 @@ const Project = () => {
                                 py="0.35rem"
                                 bg={colorMode === "dark" ? "#fff" : "#000"}
                                 color={colorMode === "dark" ? "#000" : "#fff"}
+                                _hover={{ transform: "translateY(-3px)" }}
+                                transition="all 0.3s linear"
                               >
                                 <FaLink />
                                 Demo
@@ -104,6 +125,8 @@ const Project = () => {
                                   py="0.35rem"
                                   bg={colorMode === "dark" ? "#fff" : "#000"}
                                   color={colorMode === "dark" ? "#000" : "#fff"}
+                                  _hover={{ transform: "translateY(-3px)" }}
+                                  transition="all 0.3s linear"
                                 >
                                   <FaGithub />
                                   RithEvilx
