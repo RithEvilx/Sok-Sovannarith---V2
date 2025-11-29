@@ -12,7 +12,14 @@ const Skill = () => {
       <Heading size="xl">{t("Skills")}</Heading>
       <Flex flexWrap="wrap" gap="0.5rem">
         {SkillsData.map((skill, index) => (
-          <Badge key={index} px="0.5rem" bg={colorMode === "dark" ? "#fff" : "#000"} color={colorMode === "dark" ? "#000" : "#fff"}>
+          <Badge
+            key={index}
+            px="0.5rem"
+            bg={colorMode === "dark" ? "#fff" : "#000"}
+            color={colorMode === "dark" ? "#000" : "#fff"}
+            _hover={{ transform: "translateY(-5px)" }}
+            transition="all 0.3s linear"
+          >
             {skill}
           </Badge>
         ))}

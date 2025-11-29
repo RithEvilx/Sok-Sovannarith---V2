@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { Badge, Box, Flex, GridItem, Heading, Image, SimpleGrid, Tabs, Text } from "@chakra-ui/react";
+import { Badge, Box, Flex, GridItem, Heading, Image, Link, SimpleGrid, Tabs, Text } from "@chakra-ui/react";
 import { useColorMode } from "@/components/ui/color-mode";
-import { DevelopmentProjectData } from "@/constants/data";
+import { FeaturedProjectData } from "@/constants/data";
 // Import Image
 import MyProfile from "@/assets/imgs/my_profile.webp";
+import { FaGithub, FaLink } from "react-icons/fa6";
+import { Tooltip } from "@/components/ui/tooltip";
 
 const Project = () => {
   const { t } = useTranslation();
@@ -32,49 +34,91 @@ const Project = () => {
           </Text>
         </Flex>
         <SimpleGrid mt="2rem">
-          <Tabs.Root defaultValue="development" variant="plain">
+          <Tabs.Root defaultValue="featuredProject" variant="plain">
             <Tabs.List bg="bg.muted" rounded="l3" p="1" width="100%" mb="1rem">
-              <Tabs.Trigger value="development" flex={1}>
+              <Tabs.Trigger value="featuredProject" flex={1}>
                 <Flex justifyContent="center" width="100%">
-                  Development
+                  Featured Project
                 </Flex>
               </Tabs.Trigger>
-              <Tabs.Trigger value="miniProject" flex={1}>
+              <Tabs.Trigger value="sideProject" flex={1}>
                 <Flex justifyContent="center" width="100%">
-                  Mini Project
+                  Side Project
                 </Flex>
               </Tabs.Trigger>
 
               <Tabs.Indicator rounded="l2" />
             </Tabs.List>
-            <Tabs.Content value="development">
-              <SimpleGrid columns={2}>
-                {DevelopmentProjectData.map((development, index) => (
-                  <GridItem key={index} border="1px solid #e5e5e5" rounded="md" _hover={{ boxShadow: "md" }} transition="all 0.5s" cursor="pointer">
+            <Tabs.Content value="featuredProject">
+              <SimpleGrid columns={{ base: 1, md: 2 }} gap="0.5rem">
+                {FeaturedProjectData.map((featuredProject, index) => (
+                  <GridItem
+                    key={index}
+                    border="1px solid #e5e5e5"
+                    rounded="md"
+                    transition="all 0.5s"
+                    overflow="hidden"
+                    _hover={{
+                      boxShadow: colorMode === "dark" ? "0px 0px 15px #eee, 0px 0px 15px #eee inset" : "0px 0px 0 #0a0a0a, 0px 0px 15px #0a0a0a50",
+                    }}
+                  >
                     <Flex direction="column">
-                      <Box height="250px">
-                        <Image src={MyProfile} alt={development.title} loading="lazy" width="100%" height="100%" objectFit="cover" />
+                      <Box height="250px" overflow="hidden" cursor="pointer">
+                        <Image src={MyProfile} alt={featuredProject.title} loading="lazy" width="100%" height="100%" objectFit="cover" />
                       </Box>
                       {/* Content */}
-                      <Flex direction="column" gap="0.25rem" padding="0.75rem">
-                        <Text fontWeight="semibold">{development.title}</Text>
-                        <Text color="#a0a0a0">{development.date}</Text>
-                        <Text color="#bfbfbf">{development.description}</Text>
-                        <Flex flexWrap="wrap" gap="0.5rem">
-                          {development.tech.map((tech, idx) => (
-                            <Badge key={idx} px="0.25rem" border="1px solid #eee" variant="subtle">
-                              {tech}
-                            </Badge>
-                          ))}
+                      <Flex direction="column" padding="0.5rem 0.75rem 0.75rem">
+                        <Flex direction="column" justifyContent="space-between" alignItems="flex-start">
+                          <Text fontWeight="bold" fontSize="18px" lineHeight={1.25}>
+                            {featuredProject.title}
+                          </Text>
+                          <Text>{featuredProject.date}</Text>
+                          <Tooltip content={featuredProject.description} showArrow>
+                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem">
+                              {featuredProject.description}
+                            </Text>
+                          </Tooltip>
+                          <Flex flexWrap="wrap" gap="0.5rem" marginBlock="0.25rem 0.75rem">
+                            {featuredProject.tech.map((tech, idx) => (
+                              <Badge key={idx} px="0.25rem" border="1px solid #eee" variant="subtle">
+                                {tech}
+                              </Badge>
+                            ))}
+                          </Flex>
+                          <Flex gap="0.35rem">
+                            <Link href={featuredProject.demo} target="_blank" outline="none">
+                              <Badge
+                                px="0.65rem"
+                                py="0.35rem"
+                                bg={colorMode === "dark" ? "#fff" : "#000"}
+                                color={colorMode === "dark" ? "#000" : "#fff"}
+                              >
+                                <FaLink />
+                                Demo
+                              </Badge>
+                            </Link>
+                            {featuredProject.github && (
+                              <Link href={featuredProject.github} target="_blank" outline="none">
+                                <Badge
+                                  px="0.65rem"
+                                  py="0.35rem"
+                                  bg={colorMode === "dark" ? "#fff" : "#000"}
+                                  color={colorMode === "dark" ? "#000" : "#fff"}
+                                >
+                                  <FaGithub />
+                                  RithEvilx
+                                </Badge>
+                              </Link>
+                            )}
+                          </Flex>
                         </Flex>
-                        <Flex>{development.demo}</Flex>
                       </Flex>
                     </Flex>
                   </GridItem>
                 ))}
               </SimpleGrid>
             </Tabs.Content>
-            <Tabs.Content value="miniProject">Mini Project</Tabs.Content>
+            <Tabs.Content value="sideProject">Side Project</Tabs.Content>
           </Tabs.Root>
         </SimpleGrid>
       </Flex>

@@ -11,7 +11,7 @@ const WorkExperience = () => {
     <Flex direction="column" gap="0.75rem">
       <Heading size="xl">{t("Work Experience")}</Heading>
       <Flex direction="column">
-        <Accordion.Root spaceY="4" variant="plain" collapsible>
+        <Accordion.Root spaceY="4" variant="plain" collapsible outline="none">
           {WorkExperienceData.map((item, index) => (
             <Accordion.Item key={index} value={`${index}`}>
               <Flex position="relative">

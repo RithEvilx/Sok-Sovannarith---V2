@@ -11,7 +11,7 @@ const Education = () => {
     <Flex direction="column" gap="0.75rem">
       <Heading size="xl">{t("Education")}</Heading>
       <Flex direction="column">
-        <Accordion.Root spaceY="4" variant="plain" collapsible>
+        <Accordion.Root spaceY="4" variant="plain" collapsible outline="none">
           {EducationData.map((item, index) => (
             <Accordion.Item key={index} value={`${index}`}>
               <Flex position="relative">
@@ -21,9 +21,7 @@ const Education = () => {
                       <Image width="100%" height="100%" objectFit="contain" src={item.image} alt={item.image} loading="lazy" rounded="sm" />
                     </Box>
                     <Flex direction="column" gap="0">
-                      <Text lineHeight={1}>
-                        {t(`${item.title}`)}
-                      </Text>
+                      <Text lineHeight={1}>{t(`${item.title}`)}</Text>
                       <Flex direction="column" gap="0">
                         <Span fontSize="0.785rem" color={lightText}>
                           {t(item.role)}

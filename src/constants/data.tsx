@@ -107,22 +107,32 @@ export const SkillsData = [
   "TailwindCSS",
   "Bootstrap",
   "Chakra UI",
+  "Axios",
   "Vite",
-  "TanStack Query",
   "GitHub",
+  "React Hook Form",
   "Figma",
   "VS Code",
+  "TanStack Query",
 ];
 
-//* Project Development
-export const DevelopmentProjectData = [
+//* Project Featured
+export const FeaturedProjectData = [
   {
     image: "",
     title: "Testing Title",
     date: "Testing Date",
-    description: "Testing Description",
+    description: "It about making portfolio and testing the desciption you know what i mean right",
     tech: ["TypeScript", "Chakra UI"],
-    demo: "abc",
-    github: "abc",
+    demo: "demo link",
+  },
+  {
+    image: "",
+    title: "Testing Title",
+    date: "Testing Date",
+    description: "It about making portfolio and testing the desciption you know what i mean right",
+    tech: ["TypeScript", "Chakra UI"],
+    demo: "demo link",
+    github: "github link",
   },
 ];
