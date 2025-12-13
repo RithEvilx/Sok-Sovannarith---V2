@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Badge, Box, Flex, GridItem, Heading, Image, Link, SimpleGrid, Tabs, Text } from "@chakra-ui/react";
 import { useColorMode } from "@/components/ui/color-mode";
-import { FeaturedProjectData } from "@/constants/data";
+import { FeaturedProjectData, SideProjectData } from "@/constants/data";
 // Import Image
 import { FaGithub, FaLink } from "react-icons/fa6";
 import { Tooltip } from "@/components/ui/tooltip";
@@ -60,6 +60,7 @@ const Project = () => {
                     _hover={{
                       boxShadow: colorMode === "dark" ? "0px 0px 15px #eee, 0px 0px 15px #eee inset" : "0px 0px 0 #0a0a0a, 0px 0px 15px #0a0a0a50",
                     }}
+                    _active={{ transform: "translateY(5px)" }}
                   >
                     <Flex direction="column">
                       <Box height={{ base: "200px", md: "250px" }} overflow="hidden" cursor="pointer">
@@ -119,7 +120,7 @@ const Project = () => {
                                 Demo
                               </Badge>
                             </Link>
-                            {featuredProject.github && (
+                            {featuredProject.github ? (
                               <Link href={featuredProject.github} target="_blank" outline="none">
                                 <Badge
                                   px="0.65rem"
@@ -133,6 +134,8 @@ const Project = () => {
                                   RithEvilx
                                 </Badge>
                               </Link>
+                            ) : (
+                              <></>
                             )}
                           </Flex>
                         </Flex>
@@ -142,7 +145,103 @@ const Project = () => {
                 ))}
               </SimpleGrid>
             </Tabs.Content>
-            <Tabs.Content value="sideProject">Side Project</Tabs.Content>
+            <Tabs.Content value="sideProject">
+              <SimpleGrid columns={{ base: 1, md: 2 }} gap={{ base: "1rem", md: "0.5rem" }}>
+                {SideProjectData.map((sideProject, index) => (
+                  <GridItem
+                    key={index}
+                    border="1px solid #e5e5e5"
+                    rounded="md"
+                    transition="all 0.5s"
+                    overflow="hidden"
+                    _hover={{
+                      boxShadow: colorMode === "dark" ? "0px 0px 15px #eee, 0px 0px 15px #eee inset" : "0px 0px 0 #0a0a0a, 0px 0px 15px #0a0a0a50",
+                    }}
+                    _active={{ transform: "translateY(5px)" }}
+                  >
+                    <Flex direction="column">
+                      <Box height={{ base: "200px", md: "250px" }} overflow="hidden" cursor="pointer">
+                        {sideProject.image !== "" ? (
+                          <Image
+                            src={sideProject.image}
+                            alt={sideProject.title}
+                            loading="lazy"
+                            width="100%"
+                            height="100%"
+                            objectFit="cover"
+                            bg="#eee"
+                          />
+                        ) : (
+                          <Flex
+                            justifyContent="center"
+                            alignItems="center"
+                            height="100%"
+                            bg="#eee"
+                            color="#bfbfbf"
+                            fontSize={{ base: "14px", md: "16px" }}
+                          >
+                            No Image
+                          </Flex>
+                        )}
+                      </Box>
+                      {/* Content */}
+                      <Flex direction="column" padding="0.5rem 0.75rem 0.75rem">
+                        <Flex direction="column" justifyContent="space-between" alignItems="flex-start">
+                          <Text fontWeight="bold" fontSize={{ base: "16px", md: "18px" }} lineHeight={1.25}>
+                            {sideProject.title}
+                          </Text>
+                          <Text fontSize="14px">{sideProject.date}</Text>
+                          <Tooltip content={sideProject.description} showArrow>
+                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem" fontSize="14px">
+                              {sideProject.description}
+                            </Text>
+                          </Tooltip>
+                          <Flex flexWrap="wrap" gap="0.5rem" marginBlock="0.25rem 0.75rem">
+                            {sideProject.tech.map((tech, idx) => (
+                              <Badge key={idx} px="0.25rem" border="1px solid #eee" variant="subtle">
+                                {tech}
+                              </Badge>
+                            ))}
+                          </Flex>
+                          <Flex gap="0.35rem">
+                            <Link href={sideProject.demo} target="_blank" outline="none">
+                              <Badge
+                                px="0.65rem"
+                                py="0.35rem"
+                                bg={colorMode === "dark" ? "#fff" : "#000"}
+                                color={colorMode === "dark" ? "#000" : "#fff"}
+                                _hover={{ transform: "translateY(-3px)" }}
+                                transition="all 0.3s linear"
+                              >
+                                <FaLink />
+                                Demo
+                              </Badge>
+                            </Link>
+                            {sideProject.github ? (
+                              <Link href={sideProject.github} target="_blank" outline="none">
+                                <Badge
+                                  px="0.65rem"
+                                  py="0.35rem"
+                                  bg={colorMode === "dark" ? "#fff" : "#000"}
+                                  color={colorMode === "dark" ? "#000" : "#fff"}
+                                  _hover={{ transform: "translateY(-3px)" }}
+                                  transition="all 0.3s linear"
+                                >
+                                  <FaGithub />
+                                  RithEvilx
+                                </Badge>
+                              </Link>
+                            ) : (
+                              <></>
+                            )}
+                          </Flex>
+                        </Flex>
+                      </Flex>
+                    </Flex>
+                  </GridItem>
+                ))}
+              </SimpleGrid>
+            </Tabs.Content>
           </Tabs.Root>
         </SimpleGrid>
       </Flex>

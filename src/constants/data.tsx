@@ -5,6 +5,12 @@ import BELTEI from "@/assets/imgs/logo/beltei_international_school.png";
 import RUPP from "@/assets/imgs/logo/royal_university_of_phnom_penh.jpg";
 import ANT from "@/assets/imgs/logo/ant.png";
 import RomdoulKravanhResort from "/imgs/romdoul_kravanh_resort.png";
+import HoverCardEffect from "/imgs/hover_card_effect.png";
+import ImageSlider from "/imgs/image_slider.png";
+import CameraStore from "/imgs/camera_store.png";
+import CarShop from "/imgs/car_shop.png";
+import FacebookClone from "/imgs/facebook_clone.png";
+import FirstPortfolio from "/imgs/first_portfolio.png";
 
 //* About Me
 export const AboutMeData = [
@@ -126,15 +132,64 @@ export const FeaturedProjectData = [
     description:
       "A complete end-to-end room booking platform featuring real-time room availability, responsive UI, and a smooth booking flow. Integrated secure online payment through ABA Bank Payment Gateway, ensuring fast and trusted transactions for users. Built with a modern frontend stack focused on performance, usability, and clean UI/UX.",
     tech: ["TypeScript", "Chakra UI", "TanStack Query"],
-    demo: "https://www.romdoul-kravanh.com/",
+    demo: "https://www.romdoul-kravanh.com",
+    github: "",
+  },
+];
+export const SideProjectData = [
+  {
+    image: HoverCardEffect,
+    title: "Hover Card Effect",
+    date: "June 2025",
+    description:
+      "This project demonstrates the use of advanced CSS selectors: The adjacent sibling combinator ' + ', The universal selector ' * ', The pseudo-class ' :has() '.",
+    tech: ["HTML", "CSS"],
+    demo: "https://rithevilx.github.io/HoverCardEffect",
+    github: "https://github.com/RithEvilx/HoverCardEffect",
   },
   {
-    image: "",
-    title: "Testing Title",
-    date: "Testing Date",
-    description: "It about making portfolio and testing the desciption you know what i mean right",
-    tech: ["TypeScript", "Chakra UI"],
-    demo: "demo link",
-    github: "github link",
+    image: ImageSlider,
+    title: "Image Slider",
+    date: "June 2025",
+    description: "This project demonstrates animation of the image slider.",
+    tech: ["HTML", "CSS"],
+    demo: "https://rithevilx.github.io/ImageSlider",
+    github: "https://github.com/RithEvilx/ImageSlider",
+  },
+  {
+    image: FirstPortfolio,
+    title: "First Portfolio",
+    date: "May 2024",
+    description: "This project is showcase about my skill, education and work experiences and it was build after my year 4 exam finished.",
+    tech: ["HTML", "CSS"],
+    demo: "https://rithevilx.github.io/soksovannarith",
+    github: "https://github.com/RithEvilx/soksovannarith",
+  },
+  {
+    image: CameraStore,
+    title: "Camera Store",
+    date: "May 2023",
+    description: "This project demonstrates about my first project after completed the HTML short course at ANT Technology Training Center.",
+    tech: ["HTML", "CSS"],
+    demo: "https://rithevilx.github.io/sovannarith-camera-store",
+    github: "https://github.com/RithEvilx/sovannarith-camera-store",
+  },
+  {
+    image: CarShop,
+    title: "Car Shop",
+    date: "Mar 2023",
+    description: "This project demonstrates about small homework of HTML short course at ANT Technology Training Center.",
+    tech: ["HTML", "CSS"],
+    demo: "https://rithevilx.github.io/Shop-Car",
+    github: "https://github.com/RithEvilx/Shop-Car",
+  },
+  {
+    image: FacebookClone,
+    title: "Facebook Clone",
+    date: "Jan 2023",
+    description: "This project is my first clone project.",
+    tech: ["HTML", "CSS"],
+    demo: "https://rithevilx.github.io/Facebook-Homepage/",
+    github: "https://github.com/RithEvilx/Facebook-Homepage",
   },
 ];
