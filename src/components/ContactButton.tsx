@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { RiContactsBook3Fill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { Tooltip } from "./ui/tooltip";
@@ -63,24 +63,28 @@ END:VCARD
           right="20px"
           zIndex={2000}
           initial={{ opacity: 0, scale: 0.9, bottom: 0 }}
-          animate={{ opacity: 1, scale: 1, bottom: 20 }}
+          animate={{ opacity: 1, scale: 1, bottom: 90 }}
           exit={{ opacity: 0, scale: 0.9, bottom: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
         >
           <Tooltip showArrow content={t("Save contact")} positioning={{ placement: "left" }} openDelay={0} closeDelay={100}>
-            <Button
+            <Flex
+              justifyContent="center"
+              alignItems="center"
               onClick={handleDownloadContact}
               boxSize="3.5rem"
               rounded="full"
-              shadow="sm"
-              aria-label={t("Save contact")}
+              boxShadow="md"
               bg={panelBg}
               borderColor={panelBorder}
               _hover={{ bg: hoverBg }}
               color={colorMode === "dark" ? "white" : "black"}
+              aria-label={t("Save contact")}
+              transition="all 0.5s"
+              cursor="pointer"
             >
-              <RiContactsBook3Fill />
-            </Button>
+              <RiContactsBook3Fill size="1.5rem" />
+            </Flex>
           </Tooltip>
         </MotionBox>
       )}

@@ -63,89 +63,117 @@ const FloatSetting = () => {
         <MotionBox
           as="div"
           position="fixed"
-          left="20px"
-          zIndex={2000}
+          right="20px"
+          zIndex={3000}
           initial={{ opacity: 0, scale: 0.9, bottom: 0 }}
           animate={{ opacity: 1, scale: 1, bottom: 20 }}
           exit={{ opacity: 0, scale: 0.9, bottom: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
         >
-          <Box zIndex={999}>
-            <Menu.Root>
-              <Menu.Trigger asChild>
-                <Box>
-                  <Tooltip showArrow content={t("Setting")} positioning={{ placement: "left" }} openDelay={0} closeDelay={100}>
-                    <Flex
-                      alignItems="center"
-                      justifyContent="center"
-                      boxSize="3.5rem"
-                      rounded="full"
-                      shadow="sm"
-                      bg={panelBg}
-                      borderColor={panelBorder}
-                      _hover={{ bg: hoverBg }}
-                      color={colorMode === "dark" ? "white" : "black"}
-                    >
-                      <Box as="button">
-                        <LuSettings size="1.5rem" />
+          <Menu.Root>
+            <Menu.Trigger asChild>
+              <Box cursor="pointer">
+                <Tooltip showArrow content={t("Setting")} positioning={{ placement: "left" }} openDelay={0} closeDelay={100}>
+                  <Flex
+                    justifyContent="center"
+                    alignItems="center"
+                    boxSize="3.5rem"
+                    rounded="full"
+                    shadow="md"
+                    bg={panelBg}
+                    borderColor={panelBorder}
+                    _hover={{ bg: hoverBg }}
+                    color={colorMode === "dark" ? "white" : "black"}
+                    aria-label={t("setting")}
+                    transition="all 0.5s"
+                    cursor="pointer"
+                  >
+                    <LuSettings size="1.5rem" />
+                  </Flex>
+                </Tooltip>
+              </Box>
+            </Menu.Trigger>
+            <Portal>
+              <Menu.Positioner>
+                <Menu.Content display="flex" flexDirection="column" zIndex={3000}>
+                  {/* KH */}
+                  <Menu.Item
+                    value="kh"
+                    onClick={() => setLanguage("kh")}
+                    padding="0.25rem"
+                    mr="10px"
+                    bg={currentLang === "kh" ? activeBg : "transparent"}
+                    _hover={{ bg: `${colorMode === "dark" ? "#888" : "#eee"}` }}
+                    transition="all 0.5s"
+                    cursor="pointer"
+                    _active={{ opacity: 0.75 }}
+                  >
+                    <Flex alignItems="center" gap="0.5rem">
+                      <Box
+                        as="button"
+                        aria-label="Switch to Khmer"
+                        p="0.25rem"
+                        rounded="full"
+                        transition="transform 0.15s ease, background 0.15s ease"
+                      >
+                        <Avatar.Root boxSize="8">
+                          <Avatar.Fallback name="KH" />
+                          <Avatar.Image src={KH} alt="Khmer" />
+                        </Avatar.Root>
                       </Box>
+                      <Text>Khmer</Text>
                     </Flex>
-                  </Tooltip>
-                </Box>
-              </Menu.Trigger>
-              <Portal>
-                <Menu.Positioner>
-                  <Menu.Content display="flex" flexDirection="column">
-                    {/* KH */}
-                    <Menu.Item value="kh" onClick={() => setLanguage("kh")} padding="0.25rem" mr='10px' bg={currentLang === "kh" ? activeBg : "transparent"}>
-                      <Flex alignItems="center" gap="0.5rem">
-                        <Box
-                          as="button"
-                          aria-label="Switch to Khmer"
-                          p="0.25rem"
-                          rounded="full"
-                          transition="transform 0.15s ease, background 0.15s ease"
-                        >
-                          <Avatar.Root boxSize="8">
-                            <Avatar.Fallback name="KH" />
-                            <Avatar.Image src={KH} alt="Khmer" />
-                          </Avatar.Root>
-                        </Box>
-                        <Text>Khmer</Text>
-                      </Flex>
-                    </Menu.Item>
-                    {/* EN */}
-                    <Menu.Item value="en" onClick={() => setLanguage("en")} padding="0.25rem" mr='10px' bg={currentLang === "en" ? activeBg : "transparent"}>
-                      <Flex alignItems="center" gap="0.5rem">
-                        <Box
-                          as="button"
-                          aria-label="Switch to English"
-                          p="0.25rem"
-                          rounded="full"
-                          transition="transform 0.15s ease, background 0.15s ease"
-                        >
-                          <Avatar.Root boxSize="8">
-                            <Avatar.Fallback name="EN" />
-                            <Avatar.Image src={EN} alt="English" />
-                          </Avatar.Root>
-                        </Box>
-                        <Text>English</Text>
-                      </Flex>
-                    </Menu.Item>
-                    {/* Toggle Mode */}
-                    <Menu.Item value="dark-mode" onClick={toggleColorMode} padding="0.25rem" mr='10px'>
-                      <Flex alignItems="center" gap="0.5rem">
-                        <IconButton aria-label="Toggle color mode" variant="ghost" rounded="full" border="2px solid #eee">
-                          {colorMode === "dark" ? <MdOutlineLightMode size="2rem" /> : <MdOutlineDarkMode size="2rem" />}
-                        </IconButton>
-                        <Text>{colorMode === "dark" ? "Light Mode" : "Dark Mode"}</Text>
-                      </Flex>
-                    </Menu.Item>
-                  </Menu.Content>
-                </Menu.Positioner>
-              </Portal>
-            </Menu.Root>
-          </Box>
+                  </Menu.Item>
+                  {/* EN */}
+                  <Menu.Item
+                    value="en"
+                    onClick={() => setLanguage("en")}
+                    padding="0.25rem"
+                    mr="10px"
+                    bg={currentLang === "en" ? activeBg : "transparent"}
+                    _hover={{ bg: `${colorMode === "dark" ? "#888" : "#eee"}` }}
+                    transition="all 0.5s"
+                    cursor="pointer"
+                    _active={{ opacity: 0.75 }}
+                  >
+                    <Flex alignItems="center" gap="0.5rem">
+                      <Box
+                        as="button"
+                        aria-label="Switch to English"
+                        p="0.25rem"
+                        rounded="full"
+                        transition="transform 0.15s ease, background 0.15s ease"
+                      >
+                        <Avatar.Root boxSize="8">
+                          <Avatar.Fallback name="EN" />
+                          <Avatar.Image src={EN} alt="English" />
+                        </Avatar.Root>
+                      </Box>
+                      <Text>English</Text>
+                    </Flex>
+                  </Menu.Item>
+                  {/* Toggle Mode */}
+                  <Menu.Item
+                    value="dark-mode"
+                    onClick={toggleColorMode}
+                    padding="0.25rem"
+                    mr="10px"
+                    _hover={{ bg: `${colorMode === "dark" ? "#888" : "#eee"}` }}
+                    transition="all 0.5s"
+                    cursor="pointer"
+                    _active={{ opacity: 0.75 }}
+                  >
+                    <Flex alignItems="center" gap="0.5rem">
+                      <IconButton aria-label="Toggle color mode" variant="ghost" rounded="full" border="2px solid #eee">
+                        {colorMode === "dark" ? <MdOutlineLightMode size="2rem" /> : <MdOutlineDarkMode size="2rem" />}
+                      </IconButton>
+                      <Text>{colorMode === "dark" ? "Light Mode" : "Dark Mode"}</Text>
+                    </Flex>
+                  </Menu.Item>
+                </Menu.Content>
+              </Menu.Positioner>
+            </Portal>
+          </Menu.Root>
         </MotionBox>
       )}
     </AnimatePresence>
