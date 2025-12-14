@@ -9,7 +9,7 @@ const Skill = () => {
 
   return (
     <Flex direction="column" gap="0.75rem">
-      <Heading size="xl">{t("Skills")}</Heading>
+      <Heading size="xl">{t("skills")}</Heading>
       <Flex flexWrap="wrap" gap="0.5rem">
         {SkillsData.map((skill, index) => (
           <Badge

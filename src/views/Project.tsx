@@ -26,10 +26,10 @@ const Project = () => {
             {t("My Projects")}
           </Badge>
           <Heading fontSize={{ base: "xl", sm: "2xl", md: "4xl" }} fontWeight="bold">
-            Check out my lastest works
+            {t("Check out my lastest works")}
           </Heading>
           <Text color="#bfbfbf" fontSize={{ base: "14px", md: "18px" }} textAlign="center">
-            I developed and designed websites, from simple pages to advanced web applications. Here are a few of my projects.
+            {t("I developed and designed websites, from simple pages to advanced web applications. Here are a few of my projects.")}
           </Text>
         </Flex>
         <SimpleGrid mt={{ base: "1rem", md: "2rem" }}>
@@ -37,12 +37,12 @@ const Project = () => {
             <Tabs.List bg="bg.muted" rounded="l3" p="1" width="100%" mb="1rem">
               <Tabs.Trigger value="featuredProject" flex={1}>
                 <Flex justifyContent="center" width="100%">
-                  Featured Project
+                  {t("Featured Project")}
                 </Flex>
               </Tabs.Trigger>
               <Tabs.Trigger value="sideProject" flex={1}>
                 <Flex justifyContent="center" width="100%">
-                  Side Project
+                  {t("Side Project")}
                 </Flex>
               </Tabs.Trigger>
 
@@ -83,7 +83,7 @@ const Project = () => {
                             color="#bfbfbf"
                             fontSize={{ base: "14px", md: "16px" }}
                           >
-                            No Image
+                            {t("No Image")}
                           </Flex>
                         )}
                       </Box>
@@ -95,7 +95,7 @@ const Project = () => {
                           </Text>
                           <Text fontSize="14px">{featuredProject.date}</Text>
                           <Tooltip content={featuredProject.description} showArrow>
-                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem" fontSize="14px">
+                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem" fontSize="14px" height="42px">
                               {featuredProject.description}
                             </Text>
                           </Tooltip>
@@ -117,7 +117,7 @@ const Project = () => {
                                 transition="all 0.3s linear"
                               >
                                 <FaLink />
-                                Demo
+                                {t("Demo")}
                               </Badge>
                             </Link>
                             {featuredProject.github ? (
@@ -180,7 +180,7 @@ const Project = () => {
                             color="#bfbfbf"
                             fontSize={{ base: "14px", md: "16px" }}
                           >
-                            No Image
+                            {t("No Image")}
                           </Flex>
                         )}
                       </Box>
@@ -192,7 +192,7 @@ const Project = () => {
                           </Text>
                           <Text fontSize="14px">{sideProject.date}</Text>
                           <Tooltip content={sideProject.description} showArrow>
-                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem" fontSize="14px">
+                            <Text color="#bfbfbf" lineClamp={2} marginBlock="0.5rem" fontSize="14px" height="42px">
                               {sideProject.description}
                             </Text>
                           </Tooltip>
@@ -214,7 +214,7 @@ const Project = () => {
                                 transition="all 0.3s linear"
                               >
                                 <FaLink />
-                                Demo
+                                {t("Demo")}
                               </Badge>
                             </Link>
                             {sideProject.github ? (
